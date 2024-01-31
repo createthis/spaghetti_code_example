@@ -1,0 +1,38 @@
+{
+  "name": "overly-complex-project",
+  "version": "1.0.0",
+  "description": "A Node.js project with overly complex code and tests",
+  "main": "overlyComplexFunction.js",
+  "scripts": {
+    "test": "mocha test/",
+    "coverage": "nyc mocha"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "html",
+      "text-summary"
+    ],
+    "include": [
+      "overlyComplexFunction.js"
+    ],
+    "exclude": [
+      "test/"
+    ],
+    "all": true
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "sinon": "^11.1.2",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "custom-library": "file:./custom-library",
+    "fs": "0.0.1-security",
+    "util": "^0.12.4"
+  }
+}
